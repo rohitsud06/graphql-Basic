@@ -1,19 +1,11 @@
 package com.example.learning.demo.daos;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.example.learning.demo.model.Movies;
 
-
-
-
-
-public interface MovieDao extends JpaRepository<Movies, Long>{
-	
-	List<String> getMovies();
-	
-	int getId(String movie_name);
+@Repository
+public interface MovieDao extends JpaRepository<Movies, Long> {
 
 }

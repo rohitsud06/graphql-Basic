@@ -2,12 +2,12 @@ schema {
  query: Query
 }
 
-type Query {
- getMovieId(movie_name : String):Int
+type Query { 
+ getMovies : [Movies]
 }
 
 type Movies {
-  movie_name:String
-  movie_id:int
-  movie_release_year:int
+	id : Long
+	movieName : String
+	yearOfRelease : String
 }

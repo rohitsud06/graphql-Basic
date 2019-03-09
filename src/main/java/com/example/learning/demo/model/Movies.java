@@ -1,47 +1,66 @@
 package com.example.learning.demo.model;
 
-import java.io.Serializable;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table/*(name = "Movies")*/
-public class Movies implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+@Table(name = "Movies")
+public class Movies  {
 	
-	
-	private String movie_name;
-
 	@Id
-	private int movie_id;
+	@Column(name = "ID")
+	private long id;
+	
+	@Column(name = "MOVIENAME")
+	private String movieName;
+	
+	@Column(name = "YEAROFRELEASE")
+	private String yearOfRelease;
 
-	private int movie_release_year;
-
-	public String getMovie_name() {
-		return movie_name;
+	/**
+	 * @return the id
+	 */
+	public long getId() {
+		return id;
 	}
 
-	public void setMovie_name(String movie_name) {
-		this.movie_name = movie_name;
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(long id) {
+		this.id = id;
 	}
 
-	public int getMovie_id() {
-		return movie_id;
+	/**
+	 * @return the movieName
+	 */
+	public String getMovieName() {
+		return movieName;
 	}
 
-	public void setMovie_id(int movie_id) {
-		this.movie_id = movie_id;
+	/**
+	 * @param movieName the movieName to set
+	 */
+	public void setMovieName(String movieName) {
+		this.movieName = movieName;
 	}
 
-	public int getMovie_release_year() {
-		return movie_release_year;
+	/**
+	 * @return the yearOfRelease
+	 */
+	public String getYearOfRelease() {
+		return yearOfRelease;
 	}
 
-	public void setMovie_release_year(int movie_release_year) {
-		this.movie_release_year = movie_release_year;
+	/**
+	 * @param yearOfRelease the yearOfRelease to set
+	 */
+	public void setYearOfRelease(String yearOfRelease) {
+		this.yearOfRelease = yearOfRelease;
 	}
+	
+	
 
 }
